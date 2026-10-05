@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<title>Abogados en Córdoba | Estudio Jurídico Integral en Córdoba Capital</title>
+<meta name="description" content="Estudio jurídico integral en el centro de Córdoba: laboral y ART, penal, jubilaciones, familia y sucesiones, accidentes de tránsito, salud, consumo, empresas y 15 áreas más. Sedes en La Pampa y Rosario.">
+<link rel="canonical" href="https://abogadosencordoba.com.ar/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Abogados en Córdoba | Estudio Jurídico Integral">
+<meta property="og:description" content="Trabajando junto a usted en la prevención, contención y resolución integral de conflictos. 15 áreas de práctica en Córdoba Capital.">
+<meta property="og:url" content="https://abogadosencordoba.com.ar/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Gloock&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.46.0/dist/tabler-icons.min.css">
+<link rel="stylesheet" href="./styles.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"LegalService",
+  "name":"Abogados en Córdoba – Estudio Jurídico Integral",
+  "url":"https://abogadosencordoba.com.ar/",
+  "image":"https://abogadosencordoba.com.ar/sello.png",
+  "telephone":"+54 9 351 746-3467",
+  "email":"info@abogadosencordoba.com.ar",
+  "address":{"@type":"PostalAddress","streetAddress":"27 de Abril 464, Piso 2, Of. C","addressLocality":"Córdoba","addressRegion":"Córdoba","postalCode":"5000","addressCountry":"AR"},
+  "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"20:00"}],
+  "areaServed":["Córdoba","La Pampa","Rosario","Argentina"],
+  "sameAs":["https://www.instagram.com/abogadosencordoba/","https://www.facebook.com/ESTUDIOABOGADOSENCORDOBA/"],
+  "knowsAbout":["Derecho Laboral","Accidentes de Trabajo y ART","Derecho Penal","Derecho Previsional","Derecho del Consumidor","Derecho Societario","Derecho de Familia","Sucesiones","Derecho a la Salud","Daños y Perjuicios","Seguros y Accidentes de Tránsito","Delitos Informáticos","Negociación y Mediación","Derecho Tributario","Propiedad Horizontal","Gestión de Cobranzas"]
+}
+</script>
+</head>
+<body>
+
+<!-- burger fuera del header (stacking context) -->
+<button class="burger" id="burger" aria-label="Abrir menú" aria-controls="mnav" aria-expanded="false"><span></span><span></span><span></span></button>
+<div id="moverlay"></div>
+<nav id="mnav" aria-label="Menú principal">
+  <img src="./sello.png" class="mnav-logo" alt="Sello de Abogados en Córdoba con balanza de la justicia" width="64" height="64">
+  <div class="mnav-divider"></div>
+  <a href="./index.html">Inicio</a>
+  <a href="./nosotros.html">Nosotros</a>
+  <div class="m-areas" id="mAreas">
+    <button type="button" aria-expanded="false">Áreas<i class="ti ti-chevron-down"></i></button>
+    <div class="m-areas-list" id="mAreasList"></div>
+  </div>
+  <a href="./empresas.html">Empresas</a>
+  <a href="#contacto">Contacto</a>
+  <a class="btn btn-gold" href="https://wa.me/5493517463467?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20con%20el%20estudio." target="_blank" rel="noopener">Consultar</a>
+</nav>
+
+<div class="topbar" aria-label="Datos de contacto">
+  <div class="wrap">
+    <div class="tb-left">
+      <span class="tb-item"><i class="ti ti-map-pin"></i>27 de Abril 464, Piso 2 Of. C · Centro, Córdoba</span>
+      <a class="tb-item" href="mailto:info@abogadosencordoba.com.ar"><i class="ti ti-mail"></i>info@abogadosencordoba.com.ar</a>
+      <span class="tb-item"><i class="ti ti-clock"></i>Lun. a vie. de 8 a 20 h</span>
+    </div>
+    <div class="tb-right">
+      <a href="https://www.instagram.com/abogadosencordoba/" target="_blank" rel="noopener" aria-label="Instagram de Abogados en Córdoba"><i class="ti ti-brand-instagram"></i></a>
+      <a href="https://www.facebook.com/ESTUDIOABOGADOSENCORDOBA/" target="_blank" rel="noopener" aria-label="Facebook de Abogados en Córdoba"><i class="ti ti-brand-facebook"></i></a>
+    </div>
+  </div>
+</div>
+
+<header id="siteHeader">
+  <div class="wrap h-inner">
+    <a class="h-logo" href="./index.html" aria-label="Abogados en Córdoba, inicio">
+      <img src="./sello.png" alt="Sello de Abogados en Córdoba" width="58" height="58">
+      <span class="wm"><b><span>Abogados</span> <span>en Córdoba</span></b><span>Estudio jurídico integral</span></span>
+    </a>
+    <nav class="desk" aria-label="Navegación principal">
+      <a href="./index.html" aria-current="page">Inicio</a>
+      <a href="./nosotros.html">Nosotros</a>
+      <div class="dd" id="ddAreas">
+        <button type="button" aria-expanded="false" aria-controls="mega">Áreas<i class="ti ti-chevron-down"></i></button>
+        <div class="mega" id="mega">
+          <div class="mega-head"><p>Quince áreas de práctica</p><a href="./areas.html">Ver todas las áreas →</a></div>
+          <div class="mega-cols" id="megaCols"></div>
+        </div>
+      </div>
+      <a href="./empresas.html">Empresas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="h-cta">
+      <a class="btn btn-gold" href="https://wa.me/5493517463467?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20con%20el%20estudio." target="_blank" rel="noopener">Consultar</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="imgbg">
+  <div class="bg" role="img" aria-label="Cúpula y torres de la Catedral de Córdoba, en el centro histórico de la ciudad"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <img src="./sello.png" class="hero-logo reveal" alt="Sello de Abogados en Córdoba con balanza de la justicia" width="96" height="96">
+      <p class="eyebrow reveal d1">Estudio jurídico integral</p>
+      <h1 class="hero-h1 reveal d2">Abogados<br>en&nbsp;Córdoba</h1>
+      <p class="hero-lema reveal d3">Trabajando junto a usted en la <b>prevención, contención y resolución integral</b> de&nbsp;conflictos.</p>
+      <div class="hero-ctas reveal d4">
+        <a class="btn btn-gold" href="https://wa.me/5493517463467?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20con%20el%20estudio." target="_blank" rel="noopener">Consultar</a>
+        <a class="btn btn-line" href="#areas">Ver áreas</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-facts">
+    <div class="wrap">
+      <div class="fact"><b class="count" data-target="15">15</b><span>Áreas de<br>práctica</span></div>
+      <div class="fact"><b class="count" data-target="3">3</b><span>Sedes: Córdoba,<br>La Pampa y Rosario</span></div>
+      <div class="fact"><b class="count" data-target="5">5</b><span>Profesionales<br>de distintas ramas</span></div>
+      <div class="fact txt"><b>8 a 20 h</b><span>Lunes a viernes<br>y consultas online</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EL ESTUDIO ============ -->
+<section id="estudio" class="grain">
+  <div class="wrap">
+    <div class="est-grid">
+      <div class="reveal-left">
+        <p class="eyebrow">Nuestro estudio</p>
+        <h2 class="h2">Trato personalizado, con la estrategia legal de <em>un&nbsp;equipo.</em></h2>
+        <div class="est-scope">
+          <span>Córdoba Capital</span><span>Resto del país</span><span>Organismos internacionales</span>
+        </div>
+      </div>
+      <div class="est-body reveal-right">
+        <p>Somos un grupo de abogados y profesionales de diversas ramas con base en la ciudad de Córdoba. Actuamos también en el resto del país y ante organismos internacionales.</p>
+        <p>Asesoramos a particulares, pymes, asociaciones y empresas con soluciones integrales a medida, para resolver sus problemas judiciales y extrajudiciales de manera eficaz y eficiente, y con una correcta evaluación de los riesgos legales de cada caso.</p>
+        <a class="link-arrow" href="./nosotros.html">El estudio <i class="ti ti-arrow-right"></i></a>
+      </div>
+    </div>
+    <ul class="pilares">
+      <li class="reveal d1"><span class="num">I.</span><h3>Lealtad</h3><p>Con cada cliente, desde la primera consulta hasta el cierre del caso.</p></li>
+      <li class="reveal d2"><span class="num">II.</span><h3>Responsabilidad</h3><p>Profesional, sustentada en la capacitación constante del equipo.</p></li>
+      <li class="reveal d3"><span class="num">III.</span><h3>Claridad</h3><p>En las pautas arancelarias, con facilidades de pago.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ ÁREAS ============ -->
+<section id="areas" class="imgbg dark">
+  <div class="bg" role="img" aria-label="Biblioteca jurídica con estantes de libros y escalera de madera"></div>
+  <div class="wrap">
+    <div class="areas-head">
+      <div class="reveal-left">
+        <p class="eyebrow">Áreas de práctica</p>
+        <h2 class="h2">Quince áreas, <em>un&nbsp;mismo&nbsp;estudio.</em></h2>
+        <p class="lead">Elija un área para ver en qué podemos acompañarlo. Cada una tiene su página con el detalle completo.</p>
+      </div>
+      <div class="tabs reveal-right" role="group" aria-label="Filtrar áreas">
+        <button type="button" data-filter="all" aria-pressed="true">Todas</button>
+        <button type="button" data-filter="p" aria-pressed="false">Personas</button>
+        <button type="button" data-filter="e" aria-pressed="false">Empresas</button>
+      </div>
+    </div>
+
+    <div class="areas-grid">
+      <ol class="a-list reveal" id="aList">
+        <li data-g="p e" data-slug="areas/laboral.html" data-num="I">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">I</span><span class="t">Laboral, despidos y accidentes de trabajo</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Despidos, accidentes de trabajo, enfermedades profesionales y reclamos ante comisión médica.</p>
+            <ul><li>Indemnización por despido directo e indirecto</li><li>Trabajo no registrado: regularización y acuerdos</li><li>Renuncias forzadas, diferencias de haberes y acoso laboral</li><li>Accidentes de trabajo, in itinere y enfermedades profesionales</li><li>Asesoramiento y representación de empresas en conflictos laborales</li></ul>
+          </div>
+        </li>
+        <li data-g="p e" data-slug="areas/penal.html" data-num="II">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">II</span><span class="t">Penal: denuncias y defensas</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Defensas y querellas penales, incluido el derecho penal económico.</p>
+            <ul><li>Delitos contra las personas y contra la propiedad</li><li>Lesiones y homicidios culposos en accidentes de tránsito</li><li>Responsabilidad penal por mala praxis médica</li><li>Derecho penal económico, tributario y delitos societarios</li><li>Detenciones, contravenciones y delitos contra la seguridad vial</li></ul>
+          </div>
+        </li>
+        <li data-g="p" data-slug="areas/previsional.html" data-num="III">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">III</span><span class="t">Previsional: jubilaciones y pensiones</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Trámites, planificación y juicios de reajuste ante ANSES.</p>
+            <ul><li>Jubilaciones ordinarias, por edad avanzada y regímenes diferenciales</li><li>Pensiones por fallecimiento y retiro por invalidez</li><li>Moratorias, reconocimiento de servicios y servicio doméstico</li><li>Reajustes de haberes, incluido el caso «Badaro»</li><li>Control y ejecución de sentencias de reajuste</li></ul>
+          </div>
+        </li>
+        <li data-g="p e" data-slug="areas/consumidor.html" data-num="IV">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">IV</span><span class="t">Defensa del consumidor</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Reclamos por productos y servicios, para particulares y empresas.</p>
+            <ul><li>Servicios deficientes: telefonía, internet, agua, gas y cable</li><li>Garantías y productos defectuosos</li><li>Automotrices, concesionarias y planes de ahorro</li><li>Cobros indebidos y bajas de tarjetas de crédito</li><li>Publicidad engañosa y contratos de adhesión</li></ul>
+          </div>
+        </li>
+        <li data-g="e" data-slug="areas/societario.html" data-num="V">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">V</span><span class="t">Societario, concursos y quiebras</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Constitución, vida y reorganización de sociedades.</p>
+            <ul><li>Constitución de sociedades civiles, comerciales y fundaciones</li><li>Asambleas, reformas estatutarias y cambios de capital</li><li>Conflictos y convenios de accionistas</li><li>Fusión, escisión, transformación, disolución y liquidación</li><li>Registro de marcas, patentes y propiedad intelectual</li></ul>
+          </div>
+        </li>
+        <li data-g="p" data-slug="areas/familia.html" data-num="VI">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">VI</span><span class="t">Familia, sucesiones y herencias</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Divorcios, cuidado de los hijos, sucesiones y empresas familiares.</p>
+            <ul><li>Divorcios unilaterales y bilaterales</li><li>Cuidado personal, régimen de comunicación y cuota alimentaria</li><li>Violencia familiar, filiación y adopción</li><li>Declaratoria de herederos, sucesiones y testamentos</li><li>Sucesión y conflictos en empresas familiares</li></ul>
+          </div>
+        </li>
+        <li data-g="p e" data-slug="areas/salud.html" data-num="VII">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">VII</span><span class="t">Salud: obras sociales y prepagas</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Reclamos de cobertura, medicamentos y derechos del paciente.</p>
+            <ul><li>Coberturas de discapacidad, oncología y trasplantes</li><li>Medicación de alto costo e internación domiciliaria</li><li>Amparos y reclamos ante la Superintendencia de Servicios de Salud</li><li>Alcances del Programa Médico Obligatorio (PMO)</li><li>Derechos del paciente, consentimiento informado e historia clínica</li></ul>
+          </div>
+        </li>
+        <li data-g="p e" data-slug="areas/civil.html" data-num="VIII">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">VIII</span><span class="t">Civil: daños, cobros y contratos</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Daños y perjuicios, juicios ejecutivos y contratos.</p>
+            <ul><li>Daños y perjuicios e incumplimientos contractuales</li><li>Viviendas dañadas por roturas de cañerías de agua, gas o luz</li><li>Redacción y ejecución de contratos</li><li>Desalojos y división de condominios</li><li>Amparos, medidas cautelares e inconstitucionalidades</li></ul>
+          </div>
+        </li>
+        <li data-g="p" data-slug="areas/seguros-accidentes-de-transito.html" data-num="IX">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">IX</span><span class="t">Seguros y accidentes de tránsito</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Lo acompañamos en todo el trayecto del reclamo, contra la aseguradora o un particular.</p>
+            <ul><li>Accidentes de tránsito</li><li>Reclamos judiciales y extrajudiciales a compañías de seguros</li><li>Reclamos ante comisiones médicas por lesiones</li><li>Defensa ante lesiones producto del accidente</li><li>Siniestros por roturas de cañerías y servicios defectuosos</li></ul>
+          </div>
+        </li>
+        <li data-g="p e" data-slug="areas/informatico.html" data-num="X">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">X</span><span class="t">Derecho y delitos informáticos</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Delitos en internet y protección del honor y la intimidad.</p>
+            <ul><li>Suplantación de identidad y estafas informáticas</li><li>Ransomware y accesos ilegítimos a sistemas</li><li>Extorsión, hostigamiento, calumnias e injurias en medios digitales</li><li>Difusión de imágenes íntimas sin consentimiento y pedidos de baja</li><li>Pericia preventiva y refuerzo de seguridad informática</li></ul>
+          </div>
+        </li>
+        <li data-g="p e" data-slug="areas/negociacion-y-mediacion.html" data-num="XI">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">XI</span><span class="t">Negociación y mediaciones</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Un cuerpo legal con el valor agregado de ser negociadores experimentados.</p>
+            <ul><li>Mediación judicial obligatoria y mediaciones privadas</li><li>Conflictos entre socios</li><li>Negociaciones sindicales y cobranzas extrajudiciales</li><li>Negociación de contratos, ventas y fusiones corporativas</li><li>Coaching en mesas negociadoras y mentoring de negociadores</li></ul>
+          </div>
+        </li>
+        <li data-g="e" data-slug="areas/tributario.html" data-num="XII">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">XII</span><span class="t">Tributario y penal tributario</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Defensa administrativa, judicial y penal en materia tributaria.</p>
+            <ul><li>Defensa ante el Tribunal Fiscal de la Nación y tribunales provinciales</li><li>Repetición y devolución de tributos</li><li>Exclusiones del Régimen Simplificado</li><li>Ley Penal Tributaria y Previsional; facturas apócrifas</li><li>Delitos económicos y financieros complejos</li></ul>
+          </div>
+        </li>
+        <li data-g="p e" data-slug="areas/propiedad-horizontal.html" data-num="XIII">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">XIII</span><span class="t">Propiedad horizontal, inquilinos y consorcios</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Para dueños, inquilinos, consorcios, inmobiliarias y desarrollistas.</p>
+            <ul><li>Reglamentos de copropiedad y división horizontal</li><li>Contratos de alquiler, garantes y desalojos</li><li>Cobro de alquileres y expensas impagas</li><li>Vicios de construcción y conflictos de vecindad</li><li>Asesoramiento a inmobiliarias, desarrollistas y constructoras</li></ul>
+          </div>
+        </li>
+        <li data-g="e" data-slug="areas/cobranzas.html" data-num="XIV">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">XIV</span><span class="t">Gestión de cobranzas judicial y extrajudicial</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Para pymes, empresas, profesionales y particulares.</p>
+            <ul><li>Deudas por cheques, mutuos, contratos y expensas</li><li>Mora preventiva, temprana, tardía y abandonada</li><li>Cobranza extrajudicial y judicial</li><li>Visitas periódicas a su oficina, comercio o establecimiento</li><li>Estrategia coordinada con su asesoría contable</li></ul>
+          </div>
+        </li>
+        <li data-g="e" data-slug="empresas.html" data-num="XV">
+          <button type="button" class="a-btn" aria-expanded="false"><span class="n">XV</span><span class="t">Emprendedores, pymes y empresas</span><i class="ti ti-arrow-right"></i></button>
+          <div class="a-data" hidden>
+            <p class="p-sub">Asesoría legal integral para cada etapa del negocio.</p>
+            <ul><li>Constitución de SA, SRL, SAS, cooperativas y UTE</li><li>Contratos comerciales y societarios</li><li>Libros y registros ante Inspección de Personas Jurídicas</li><li>Registro de marcas, patentes y propiedad intelectual</li><li>Planes de expansión y asesoramiento laboral</li></ul>
+          </div>
+        </li>
+      </ol>
+
+      <article class="a-panel reveal-right" id="aPanel" aria-live="polite">
+        <span class="p-num" id="pNum">I</span>
+        <p class="p-kicker">Área de práctica</p>
+        <h3 id="pTitle"></h3>
+        <div id="pBody"></div>
+        <div class="p-actions">
+          <a class="btn btn-wine" id="pWa" href="#" target="_blank" rel="noopener">Consultar</a>
+          <a class="link-arrow" id="pLink" href="#">Ver área <i class="ti ti-arrow-right"></i></a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUIÉN ============ -->
+<section id="clientes" class="grain">
+  <div class="wrap">
+    <div class="cl-head reveal">
+      <p class="eyebrow">A quién asesoramos</p>
+      <h2 class="h2">Para personas, pymes <em>y&nbsp;empresas.</em></h2>
+      <p class="lead">El mismo estudio atiende un despido, una sucesión o la constitución de una sociedad. Cambia el equipo que interviene, no el compromiso.</p>
+    </div>
+    <div class="cl-grid">
+      <div class="cl-col reveal d1">
+        <span class="tag">Particulares</span>
+        <h3>Personas y familias</h3>
+        <p>Cuando el problema es personal: el trabajo, la familia, la jubilación o la salud.</p>
+        <ul><li>Despidos y accidentes de trabajo</li><li>Divorcios, alimentos y sucesiones</li><li>Jubilaciones y reajustes</li><li>Coberturas de obra social y prepaga</li></ul>
+        <div class="chips"><button type="button" data-go="I">Laboral</button><button type="button" data-go="VI">Familia</button><button type="button" data-go="III">Jubilaciones</button><button type="button" data-go="IX">Accidentes</button></div>
+      </div>
+      <div class="cl-col feat reveal d2">
+        <span class="tag">Emprendedores y pymes</span>
+        <h3>Proyectos que crecen</h3>
+        <p class="cl-quote">«Un buen proyecto necesita una buena estrategia legal que lo respalde.»</p>
+        <ul><li>Constitución de SA, SRL, SAS y cooperativas</li><li>Contratos comerciales y modificaciones estatutarias</li><li>Ejecución de créditos y cobranzas</li><li>Marcas, patentes y planes de expansión</li></ul>
+        <a class="link-arrow" href="./empresas.html">Asesoría a pymes <i class="ti ti-arrow-right"></i></a>
+      </div>
+      <div class="cl-col reveal d3">
+        <span class="tag">Empresas</span>
+        <h3>Asesoría corporativa</h3>
+        <p>Acompañamiento diario, con visitas periódicas y coordinación con su área contable.</p>
+        <ul><li>Actas de asamblea y gobierno societario</li><li>Negociación y redacción de contratos</li><li>Orientación fiscal y defensa tributaria</li><li>Negociaciones laborales y sindicales</li></ul>
+        <div class="chips"><button type="button" data-go="V">Societario</button><button type="button" data-go="XII">Tributario</button><button type="button" data-go="XIV">Cobranzas</button><button type="button" data-go="XI">Negociación</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MÉTODO (lema) ============ -->
+<section id="metodo" class="imgbg dark">
+  <div class="bg" role="img" aria-label="Pluma estilográfica escribiendo sobre papel"></div>
+  <div class="wrap">
+    <div class="me-head reveal">
+      <p class="eyebrow">Nuestro lema</p>
+      <h2 class="h2">Prevención. Contención. <em>Resolución.</em></h2>
+      <p class="lead">Intervenimos antes, durante y, si hace falta, en la instancia judicial. Siempre con la vía más eficaz para su caso.</p>
+    </div>
+    <div class="fases">
+      <div class="fase reveal d1">
+        <span class="dot">I</span>
+        <span class="when">Antes del conflicto</span>
+        <h3>Prevención</h3>
+        <ul><li>Asesoramiento preventivo y evaluación de riesgos legales</li><li>Contratos laborales, comerciales y societarios</li><li>Planificación jubilatoria</li><li>Pericia preventiva en seguridad informática</li></ul>
+      </div>
+      <div class="fase reveal d2">
+        <span class="dot">II</span>
+        <span class="when">Cuando surge</span>
+        <h3>Contención</h3>
+        <ul><li>Asesoramiento inicial y seguimiento del caso</li><li>Planteo y valoración de las estrategias posibles</li><li>Negociación y mediación prejudicial para evitar juicios</li><li>Mediación judicial obligatoria y mediaciones privadas</li></ul>
+      </div>
+      <div class="fase reveal d3">
+        <span class="dot">III</span>
+        <span class="when">Si hay que litigar</span>
+        <h3>Resolución</h3>
+        <ul><li>Representación judicial de particulares y empresas</li><li>Reclamos administrativos, amparos y medidas cautelares</li><li>Defensas y querellas penales</li><li>Ejecución de sentencias</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="modo">
+    <div class="wrap">
+      <div class="modo-item"><i class="ti ti-user-check"></i><b>Trato personal</b><span>Un clima amable y un espacio de contención</span></div>
+      <div class="modo-item"><i class="ti ti-users-group"></i><b>Interdisciplina</b><span>Asesores contables, notariales, informáticos y de medicina legal</span></div>
+      <div class="modo-item"><i class="ti ti-device-laptop"></i><b>Consultas online</b><span>Asistencia digital y telefónica para responder rápido</span></div>
+      <div class="modo-item"><i class="ti ti-building"></i><b>Visitas a empresas</b><span>Conocemos su negocio desde adentro</span></div>
+      <div class="modo-item"><i class="ti ti-receipt"></i><b>Facilidades de pago</b><span>Pautas arancelarias claras desde el inicio</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EQUIPO ============ -->
+<section id="equipo" class="grain">
+  <div class="wrap">
+    <div class="eq-head">
+      <div class="reveal-left">
+        <p class="eyebrow">Staff</p>
+        <h2 class="h2">Profesionales de <em>distintas&nbsp;ramas.</em></h2>
+        <p class="lead">Un equipo en capacitación constante, con presencia en tres provincias.</p>
+      </div>
+      <a class="link-arrow reveal-right" href="./nosotros.html#staff">Ver el equipo <i class="ti ti-arrow-right"></i></a>
+    </div>
+    <div class="sedes">
+      <div class="sede two reveal d1">
+        <p class="sede-name"><i class="ti ti-map-pin"></i>Córdoba <em>· Sede central</em></p>
+        <div class="people">
+          <div class="person">
+            <span class="mono" aria-hidden="true">AF</span>
+            <h3>Dr. Alexis E. Frutos Dalbesio</h3>
+            <p class="roles">Abogado · Procurador · Mediador</p>
+            <p class="focus">Laboral y ART, accidentología y seguros, negociación y resolución de conflictos. Administrador de empresas, con posgrados en negociación.</p>
+          </div>
+          <div class="person">
+            <span class="mono" aria-hidden="true">GB</span>
+            <h3>Dra. María Georgina Broggi</h3>
+            <p class="roles">Abogada · Procuradora · Notaria</p>
+            <p class="focus">Civil, daños, laboral, familia y violencia de género. Diplomada en Derecho Procesal Civil y Procesal Laboral.</p>
+          </div>
+        </div>
+      </div>
+      <div class="sede reveal d2">
+        <p class="sede-name"><i class="ti ti-map-pin"></i>La Pampa</p>
+        <div class="people">
+          <div class="person">
+            <span class="mono" aria-hidden="true">OG</span>
+            <h3>Dr. Omar Gebruers</h3>
+            <p class="roles">Abogado</p>
+            <p class="focus">Derecho penal y derechos humanos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="sede two reveal d3">
+        <p class="sede-name"><i class="ti ti-map-pin"></i>Rosario <em>· Santa Fe</em></p>
+        <div class="people">
+          <div class="person">
+            <span class="mono" aria-hidden="true">CM</span>
+            <h3>Dra. Carina Mazzeo</h3>
+            <p class="roles">Abogada</p>
+            <p class="focus">Derecho societario y derecho a la salud. Diplomada en Economía y Gestión de la Salud.</p>
+          </div>
+          <div class="person">
+            <span class="mono" aria-hidden="true">JC</span>
+            <h3>Dra. Julia Canet</h3>
+            <p class="roles">Abogada</p>
+            <p class="focus">Derecho societario y derecho a la salud. Diplomada en Economía y Gestión de la Salud.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section id="contacto" class="imgbg dark">
+  <div class="bg" role="img" aria-label="Calle del centro de Córdoba con edificios históricos"></div>
+  <div class="wrap ct-grid">
+    <div class="ct-info reveal-left">
+      <p class="eyebrow">Contacto</p>
+      <h2 class="h2">En el centro <em>de&nbsp;Córdoba.</em></h2>
+      <p class="lead">Escríbanos por WhatsApp o déjenos su consulta. Le respondemos dentro del horario de atención.</p>
+      <ul class="ct-list">
+        <li><i class="ti ti-brand-whatsapp"></i><div><small>WhatsApp y teléfono</small><a href="https://wa.me/5493517463467?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20con%20el%20estudio." target="_blank" rel="noopener">(0351) 15 746-3467</a></div></li>
+        <li><i class="ti ti-mail"></i><div><small>Email</small><a href="mailto:info@abogadosencordoba.com.ar">info@abogadosencordoba.com.ar</a></div></li>
+        <li><i class="ti ti-map-pin"></i><div><small>Oficina</small><span>27 de Abril 464, Piso 2, Of. C · Córdoba (CP 5000)</span></div></li>
+        <li><i class="ti ti-clock"></i><div><small>Horario</small><span>Lunes a viernes de 8 a 20 h · Consultas online</span></div></li>
+      </ul>
+      <div class="ct-social">
+        <a href="https://www.instagram.com/abogadosencordoba/" target="_blank" rel="noopener" aria-label="Instagram @abogadosencordoba"><i class="ti ti-brand-instagram"></i></a>
+        <a href="https://www.facebook.com/ESTUDIOABOGADOSENCORDOBA/" target="_blank" rel="noopener" aria-label="Facebook de Abogados en Córdoba"><i class="ti ti-brand-facebook"></i></a>
+      </div>
+      <div class="map">
+        <iframe title="Ubicación del estudio en 27 de Abril 464, Córdoba" src="https://www.google.com/maps?q=27+de+Abril+464,+X5000+C%C3%B3rdoba,+Argentina&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="form-card reveal-right">
+      <h3>Déjenos su consulta</h3>
+      <p>Cuéntenos brevemente su caso y lo contactamos.</p>
+      <iframe name="formsubmit-iframe" id="formsubmit-iframe" title="Envío del formulario" style="display:none"></iframe>
+      <form id="contactForm" action="https://formsubmit.co/info@abogadosencordoba.com.ar" method="POST" target="formsubmit-iframe" novalidate>
+        <input type="hidden" name="_subject" value="Nueva consulta desde abogadosencordoba.com.ar">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <div class="hp-field" aria-hidden="true"><input type="text" name="_honey" tabindex="-1" autocomplete="off"></div>
+        <div class="f-row">
+          <div class="field"><label for="fNombre">Nombre</label><input id="fNombre" name="nombre" type="text" autocomplete="name" required><span class="msg">Ingrese su nombre.</span></div>
+          <div class="field"><label for="fTel">Teléfono</label><input id="fTel" name="telefono" type="tel" autocomplete="tel" required><span class="msg">Ingrese un teléfono de contacto.</span></div>
+        </div>
+        <div class="field"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" autocomplete="email" required><span class="msg">Ingrese un email válido.</span></div>
+        <div class="field"><label for="fArea">Área de su consulta</label><select id="fArea" name="area"><option value="">Seleccione un área (opcional)</option></select></div>
+        <div class="field"><label for="fMsg">Mensaje</label><textarea id="fMsg" name="mensaje" required></textarea><span class="msg">Cuéntenos brevemente su consulta.</span></div>
+        <button type="submit" class="btn btn-wine" id="formSubmitBtn">Enviar consulta</button>
+        <p class="f-note">Sus datos se usan solo para responder esta consulta.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="footer-top">
+    <div class="f-col f-brand">
+      <div class="f-logo"><img src="./sello.png" alt="Sello de Abogados en Córdoba" width="64" height="64" loading="lazy"><div><b>Abogados en Córdoba</b><span>Estudio jurídico integral</span></div></div>
+      <p>Trabajando junto a usted en la prevención, contención y resolución integral de conflictos.</p>
+    </div>
+    <div class="f-col">
+      <h4>El estudio</h4>
+      <ul class="f-links">
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="./nosotros.html">Nosotros</a></li>
+        <li><a href="./areas.html">Áreas</a></li>
+        <li><a href="./empresas.html">Empresas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="f-col">
+      <h4>Áreas de práctica</h4>
+      <ul class="f-areas" id="fAreas"></ul>
+    </div>
+    <div class="f-col">
+      <h4>Contacto</h4>
+      <ul class="f-contact">
+        <li><i class="ti ti-map-pin"></i><span>27 de Abril 464, Piso 2, Of. C<br>Córdoba Capital (CP 5000)</span></li>
+        <li><i class="ti ti-brand-whatsapp"></i><a href="https://wa.me/5493517463467" target="_blank" rel="noopener">(0351) 15 746-3467</a></li>
+        <li><i class="ti ti-mail"></i><a href="mailto:info@abogadosencordoba.com.ar">info@abogadosencordoba.com.ar</a></li>
+        <li><i class="ti ti-clock"></i><span>Lun. a vie. de 8 a 20 h</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year">2026</span> Abogados en Córdoba – Estudio Jurídico Integral. Todos los derechos reservados.</p>
+    <p>Desarrollado por <a href="https://instagram.com/sageeDev" target="_blank" rel="noopener">@sageeDev</a></p>
+    <p><a href="./privacidad.html">Política de Privacidad</a></p>
+  </div>
+</footer>
+
+<a class="float wa-float" id="waFloat" href="https://wa.me/5493517463467?text=Hola%2C%20quisiera%20hacer%20una%20consulta%20con%20el%20estudio." target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+<button class="float top-float" id="backToTop" type="button" aria-label="Volver arriba"><i class="ti ti-arrow-up"></i></button>
+
+<div class="modal" id="okModal" role="dialog" aria-modal="true" aria-labelledby="okTitle">
+  <div class="modal-card">
+    <i class="ti ti-circle-check"></i>
+    <h3 id="okTitle">Consulta enviada</h3>
+    <p>Gracias por escribirnos. Le respondemos a la brevedad dentro del horario de atención.</p>
+    <button type="button" class="btn btn-wine" data-close>Cerrar</button>
+  </div>
+</div>
+
+<script src="./main.js"></script>
+</body>
+</html>
