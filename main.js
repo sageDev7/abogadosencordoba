@@ -9,6 +9,8 @@
   /* ---------- áreas: una sola fuente (el HTML del índice) ---------- */
   var list = document.getElementById("aList");
   var items = Array.prototype.slice.call(list.querySelectorAll("li[data-num]"));
+  var PREVIEW = true; // boceto: solo existe el inicio
+  function pageHref(slug) { return PREVIEW ? "#" : "./" + slug; }
   var areas = items.map(function (li) {
     return { li: li, num: li.dataset.num, slug: li.dataset.slug, title: li.querySelector(".t").textContent };
   });
@@ -19,9 +21,9 @@
   var fAreas = document.getElementById("fAreas");
   var fSelect = document.getElementById("fArea");
   areas.forEach(function (a) {
-    megaCols.insertAdjacentHTML("beforeend", '<a href="./' + a.slug + '"><span>' + a.num + '</span>' + a.title + "</a>");
-    mList.insertAdjacentHTML("beforeend", '<a href="./' + a.slug + '">' + a.title + "</a>");
-    fAreas.insertAdjacentHTML("beforeend", '<li><a href="./' + a.slug + '">' + a.title + "</a></li>");
+    megaCols.insertAdjacentHTML("beforeend", '<a href="' + pageHref(a.slug) + '" data-soon><span>' + a.num + '</span>' + a.title + "</a>");
+    mList.insertAdjacentHTML("beforeend", '<a href="' + pageHref(a.slug) + '" data-soon>' + a.title + "</a>");
+    fAreas.insertAdjacentHTML("beforeend", '<li><a href="' + pageHref(a.slug) + '" data-soon>' + a.title + "</a></li>");
     var o = document.createElement("option"); o.value = a.title; o.textContent = a.title; fSelect.appendChild(o);
   });
 
@@ -32,20 +34,32 @@
   var mqStack = window.matchMedia("(max-width:1024px)");
   var current = null;
 
+  // estado inicial: ninguna área abierta (en desktop el panel muestra una invitación)
+  function reset() {
+    current = null;
+    areas.forEach(function (x) { x.li.querySelector(".a-btn").setAttribute("aria-expanded", "false"); });
+    pNum.textContent = "";
+    pTitle.textContent = "Elija un área";
+    pBody.innerHTML = '<p class="p-sub">Seleccione una de las quince áreas para ver en qué podemos acompañarlo. Si no sabe cuál corresponde a su caso, consúltenos y lo orientamos.</p>';
+    pWa.href = WA + encodeURIComponent("Hola, quisiera hacer una consulta con el estudio.");
+    pLink.href = pageHref("areas.html");
+    pLink.innerHTML = 'Ver todas <i class="ti ti-arrow-right"></i>';
+    if (panel.parentNode !== panelHome) panelHome.appendChild(panel);
+    panel.style.display = mqStack.matches ? "none" : "";
+  }
+
   function select(a, opts) {
     opts = opts || {};
     var stacked = mqStack.matches;
-    if (stacked && current === a && !opts.force) { // acordeón: cerrar
-      a.li.querySelector(".a-btn").setAttribute("aria-expanded", "false");
-      panel.style.display = "none"; current = null; return;
-    }
+    if (current === a && !opts.force) { reset(); return; } // segundo clic: cerrar
     areas.forEach(function (x) { x.li.querySelector(".a-btn").setAttribute("aria-expanded", x === a ? "true" : "false"); });
     current = a;
     pNum.textContent = a.num;
     pTitle.textContent = a.title;
     pBody.innerHTML = a.li.querySelector(".a-data").innerHTML;
     pWa.href = WA + encodeURIComponent("Hola, quisiera hacer una consulta sobre " + a.title.toLowerCase() + ".");
-    pLink.href = "./" + a.slug;
+    pLink.href = pageHref(a.slug);
+    pLink.innerHTML = 'Ver área <i class="ti ti-arrow-right"></i>';
     panel.style.display = "";
     if (stacked) a.li.appendChild(panel); else if (panel.parentNode !== panelHome) panelHome.appendChild(panel);
     panel.classList.remove("swap"); void panel.offsetWidth; panel.classList.add("swap");
@@ -58,25 +72,22 @@
     a.li.querySelector(".a-btn").addEventListener("click", function () { select(a); });
   });
   function relayout() {
-    if (!current) { select(areas[0], { force: true, scroll: false }); return; }
+    if (!current) { reset(); return; }
     if (mqStack.matches) current.li.appendChild(panel); else panelHome.appendChild(panel);
     panel.style.display = "";
   }
   (mqStack.addEventListener ? mqStack.addEventListener("change", relayout) : mqStack.addListener(relayout));
-  select(areas[0], { force: true, scroll: false });
+  reset();
 
   // filtros Personas / Empresas
   document.querySelectorAll(".tabs button").forEach(function (b) {
     b.addEventListener("click", function () {
       var f = b.dataset.filter;
       document.querySelectorAll(".tabs button").forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
-      var first = null;
       areas.forEach(function (a) {
-        var show = f === "all" || a.li.dataset.g.split(" ").indexOf(f) > -1;
-        a.li.classList.toggle("hide", !show);
-        if (show && !first) first = a;
+        a.li.classList.toggle("hide", !(f === "all" || a.li.dataset.g.split(" ").indexOf(f) > -1));
       });
-      if (!current || current.li.classList.contains("hide")) select(first, { force: true, scroll: false });
+      if (current && current.li.classList.contains("hide")) reset();
     });
   });
 
@@ -173,6 +184,10 @@
   });
   function closeModal() { modal.classList.remove("show"); }
   modal.addEventListener("click", function (e) { if (e.target === modal || e.target.hasAttribute("data-close")) closeModal(); });
+
+  document.addEventListener("click", function (e) {
+    var l = e.target.closest('a[href="#"]'); if (l) e.preventDefault();
+  });
 
   document.getElementById("year").textContent = new Date().getFullYear();
   window.addEventListener("scroll", onScroll, { passive: true });
